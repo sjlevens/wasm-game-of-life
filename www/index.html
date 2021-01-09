@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Hello wasm-pack!</title>
+    <title>Game of Life</title>
     <style>
       body {
         position: absolute;
@@ -14,11 +14,26 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
+        overflow: hidden;
+      }
+      button {
+        margin: 10px;
+        margin-top: -20px;
+        height: 30px;
+        width: 30px;
+        background-color: transparent;
+        border: none;
+      }
+      #fps {
+        white-space: pre;
+        font-family: monospace;
       }
     </style>
   </head>
   <body>
-    <pre id="game-of-life-canvas"></pre>
+    <button class="rainbow-button" id="play-pause">▶️</button>
+    <canvas id="game-of-life-canvas"></canvas>
+    <div id="fps"></div>
     <script src="./bootstrap.js"></script>
   </body>
 </html>
